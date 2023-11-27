@@ -1,6 +1,9 @@
 {
 	"name": "mdb-test",
 	"version": "0.0.1",
+	"description": "Test project for mdb-reader configuration",
+	"repository": "github:oliverdowling/mdb-test",
+	"author": "Oliver Dowling <oliver.dowling@gmail.com> (https://oliverdowling.com.au)",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
