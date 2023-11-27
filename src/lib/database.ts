@@ -1,8 +1,4 @@
-import { Buffer } from 'buffer/';
 import MDBReader from 'mdb-reader';
-
-// @ts-expect-error `globalThis` has no signature
-globalThis.Buffer = globalThis.Buffer || Buffer;
 
 export async function readDatabase(file: File) {
 	console.log(file.name);
