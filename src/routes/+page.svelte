@@ -1,2 +1,17 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import { readDatabase } from '$lib/database';
+
+	async function fileInputChange(event: Event) {
+		const input = event.target as HTMLInputElement;
+		if (input.files === null || input.files.length === 0) {
+			console.warn('Empty file list');
+			return;
+		}
+
+		for (const file of input.files) {
+			readDatabase(file);
+		}
+	}
+</script>
+
+<input type="file" on:change={fileInputChange} />
