@@ -1,4 +1,7 @@
+import { Buffer } from 'buffer';
 import MDBReader from 'mdb-reader';
+
+globalThis.Buffer = Buffer;
 
 export async function readDatabase(file: File) {
 	console.log(file.name);
